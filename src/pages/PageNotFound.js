@@ -19,7 +19,7 @@ export const PageNotFound = () => {
             <img
               className="rounded"
               src={PageNotFoundImage}
-              alt="Page not found image"
+              alt="Page not found"
             />
           </div>
         </div>

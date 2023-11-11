@@ -9,7 +9,8 @@ export const MovieDetail = () => {
   const imageSrc = movie.poster_path
     ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
     : BackupImage;
-  const pageTitle = useTitle(movie.title);
+
+  useTitle(movie.title);
 
   useEffect(() => {
     async function fetchMovie() {
@@ -19,7 +20,7 @@ export const MovieDetail = () => {
       const json = await response.json();
       setMovie(json);
     }
-    fetchMovie();
+    fetchMovie(params.id);
   }, []);
 
   return (

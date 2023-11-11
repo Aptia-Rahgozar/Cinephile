@@ -14,34 +14,20 @@ export const Footer = () => {
         <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
           <li>
             <a
-              href="#"
+              href="https://www.instagram.com/"
               target="_blank"
               className="mr-4 hover:underline md:mr-6 "
             >
-              About
+              Instagram
             </a>
           </li>
           <li>
             <a
-              href="#"
+              href="https://www.facebook.com/"
               target="_blank"
               className="mr-4 hover:underline md:mr-6"
             >
-              Privacy Policy
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              target="_blank"
-              className="mr-4 hover:underline md:mr-6"
-            >
-              Licensing
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank" className="hover:underline">
-              Contact
+              Facebook
             </a>
           </li>
         </ul>
