@@ -16,6 +16,7 @@ export const Footer = () => {
             <a
               href="https://www.instagram.com/"
               target="_blank"
+              rel="noreferrer"
               className="mr-4 hover:underline md:mr-6 "
             >
               Instagram
@@ -25,6 +26,7 @@ export const Footer = () => {
             <a
               href="https://www.facebook.com/"
               target="_blank"
+              rel="noreferrer"
               className="mr-4 hover:underline md:mr-6"
             >
               Facebook

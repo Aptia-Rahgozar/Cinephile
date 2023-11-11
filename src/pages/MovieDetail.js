@@ -20,8 +20,8 @@ export const MovieDetail = () => {
       const json = await response.json();
       setMovie(json);
     }
-    fetchMovie(params.id);
-  }, []);
+    fetchMovie();
+  }, [params.id]);
 
   return (
     <main>
