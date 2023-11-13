@@ -1,13 +1,16 @@
 import { useSearchParams } from "react-router-dom";
 import { useFetch } from "../hooks/useFetch";
 import { useTitle } from "../hooks/useTitle";
-import { Card } from "../components/Card";
+import { Card, Pagination } from "../components";
+import { Paginate } from "../utils/Paginate";
 
-export const Search = ({ apiPath }) => {
+export const Search = ({ apiPath, currentPage, setCurrentPage }) => {
   const [searchParams] = useSearchParams();
   const queryTerm = searchParams.get("q");
 
   const { data: movies } = useFetch(apiPath, queryTerm);
+  const pageSize = 6;
+  const slicedMovies = Paginate(movies, pageSize, currentPage);
 
   useTitle(`Search Result for "${queryTerm}"`);
 
@@ -22,11 +25,17 @@ export const Search = ({ apiPath }) => {
       </section>
       <section className="max-w-7xl mx-auto py-7">
         <div className="flex justify-start flex-wrap">
-          {movies.map((movie) => (
+          {slicedMovies.map((movie) => (
             <Card key={movie.id} movie={movie} />
           ))}
         </div>
       </section>
+      <Pagination
+        totalCount={movies.length}
+        currentPage={currentPage}
+        pageSize={pageSize}
+        onPageChange={setCurrentPage}
+      />
     </main>
   );
 };

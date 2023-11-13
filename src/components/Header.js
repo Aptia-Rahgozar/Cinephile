@@ -3,7 +3,7 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 
 import Logo from "../assets/logo.png";
 
-export const Header = () => {
+export const Header = ({ setCurrentPage }) => {
   const [hidden, setHidden] = useState(true);
   const [darkMode, setDarkMode] = useState(
     JSON.parse(localStorage.getItem("darkMode")) || false
@@ -173,7 +173,7 @@ export const Header = () => {
             </div>
 
             <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-              <li>
+              <li onClick={() => setCurrentPage(1)}>
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
@@ -183,7 +183,7 @@ export const Header = () => {
                   Home
                 </NavLink>
               </li>
-              <li>
+              <li onClick={() => setCurrentPage(1)}>
                 <NavLink
                   to="movies/popular"
                   className={({ isActive }) =>
@@ -193,7 +193,7 @@ export const Header = () => {
                   Popular
                 </NavLink>
               </li>
-              <li>
+              <li onClick={() => setCurrentPage(1)}>
                 <NavLink
                   to="movies/top"
                   className={({ isActive }) =>
@@ -203,7 +203,7 @@ export const Header = () => {
                   Top Rated
                 </NavLink>
               </li>
-              <li>
+              <li onClick={() => setCurrentPage(1)}>
                 <NavLink
                   to="movies/upcoming"
                   className={({ isActive }) =>
