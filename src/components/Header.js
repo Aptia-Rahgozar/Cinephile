@@ -29,6 +29,7 @@ export const Header = ({ setCurrentPage }) => {
     event.preventDefault();
     const queryTerm = event.target.search.value;
     event.target.reset();
+    setCurrentPage(1);
 
     return navigate(`/search?q=${queryTerm}`);
   };
