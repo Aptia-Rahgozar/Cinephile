@@ -1,12 +1,16 @@
 import { Link } from "react-router-dom";
 
-export const Footer = () => {
+export const Footer = ({setCurrentPage}) => {
   return (
     <footer className="bg-white shadow dark:bg-gray-800">
       <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between border-gray-200 border-t-2">
         <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
           © 2023{" "}
-          <Link to="/" className="hover:underline">
+          <Link
+            to="/"
+            className="hover:underline"
+            onClick={() => setCurrentPage(1)}
+          >
             Cinephile™
           </Link>
           . All Rights Reserved.

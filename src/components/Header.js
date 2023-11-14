@@ -37,7 +37,11 @@ export const Header = ({ setCurrentPage }) => {
     <header>
       <nav className="bg-white border-gray-200 border-b-2 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-3">
-          <Link to="/" className="flex items-center">
+          <Link
+            to="/"
+            className="flex items-center"
+            onClick={() => setCurrentPage(1)}
+          >
             <img src={Logo} className="h-10 mr-3" alt="Cinephile Logo" />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
               Cinephile
