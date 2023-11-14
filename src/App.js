@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <Header setCurrentPage={setCurrentPage} />
       <AllRoutes currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      <Footer />
+      <Footer setCurrentPage={setCurrentPage} />
     </div>
   );
 }
